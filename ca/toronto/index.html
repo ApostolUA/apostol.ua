@@ -105,6 +105,7 @@ details[open] summary::after{content:"−"}
 footer{padding-block:2rem 3rem;font-family:var(--f-ui);font-size:.85rem;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem}
 @media (prefers-reduced-motion:no-preference){.hero h1{animation:rise .9s ease-out both}@keyframes rise{from{opacity:.2;transform:translateY(10px)}to{opacity:1;transform:none}}}
+.copy{display:inline-block;width:.72em;height:.72em;vertical-align:baseline;margin-right:.08em}.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 </style>
 
 <header class="hero">
@@ -220,7 +221,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
 </div>
 
 <footer>
-  <div class="wrap"><span>Проповідь Владики Браяна Байди на 50-ліття парафії</span><span>© 2026 apostol.ua</span></div>
+  <div class="wrap"><span>Проповідь Владики Браяна Байди на 50-ліття парафії</span><span><span class="visually-hidden">©</span><svg class="copy" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13.1 7.4a4 4 0 1 0 0 5.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> 2026 apostol.ua</span></div>
 </footer>
 
 <script>

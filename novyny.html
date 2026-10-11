@@ -98,6 +98,7 @@ footer .bar{padding-block:0}
 
 @media (max-width:860px){ .grid,.split{grid-template-columns:1fr} }
 @media (max-width:560px){ .cities{grid-template-columns:1fr} .city + .city{border-left:0; border-top:1px solid var(--line)} }
+.copy{display:inline-block;width:.72em;height:.72em;vertical-align:baseline;margin-right:.08em}.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 </style>
 </head>
 <body>
@@ -209,7 +210,7 @@ footer .bar{padding-block:0}
 
 <footer>
   <div class="wrap bar">
-    <span>© 2026 apostol.ua</span>
+    <span><span class="visually-hidden">©</span><svg class="copy" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13.1 7.4a4 4 0 1 0 0 5.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> 2026 apostol.ua</span>
     <span>«Як послав Мене Отець, так і Я посилаю вас» (Ів 20:21)</span>
   </div>
 </footer>
