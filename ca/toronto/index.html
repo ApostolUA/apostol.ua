@@ -1,0 +1,241 @@
+<!doctype html><html lang="uk"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Бог посилає вас</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Fira+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column like an iconostasis tier; lapis ground for hero & invitations, parchment for the word itself */
+:root{
+  --bg:#f3f0f6;
+  --paper:#fbfaf7;
+  --ink:#1d1a2b;
+  --muted:#5d5873;
+  --lapis:#23306b;
+  --lapis-ink:#eef0fb;
+  --gold:#b0811f;
+  --gold-soft:#e8d6a6;
+  --rule:#d9d3e3;
+  --f-display:"Ruslan Display","Alegreya",Georgia,serif;
+  --f-body:"Alegreya",Georgia,"Times New Roman",serif;
+  --f-ui:"Fira Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12111c;--paper:#1a1928;--ink:#ebe8f2;--muted:#a9a3bf;--lapis:#1c2557;--lapis-ink:#eef0fb;
+  --gold:#dcb257;--gold-soft:#5a4a24;--rule:#2f2d42;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12111c;--paper:#1a1928;--ink:#ebe8f2;--muted:#a9a3bf;--lapis:#1c2557;--lapis-ink:#eef0fb;
+  --gold:#dcb257;--gold-soft:#5a4a24;--rule:#2f2d42;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.15rem;line-height:1.6;margin:0}
+.wrap{max-width:46rem;margin:0 auto;padding-inline:20px}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+.eyebrow{font-family:var(--f-ui);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+
+/* Hero */
+.hero{background:var(--lapis);color:var(--lapis-ink);padding-block:4.5rem 3.5rem;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:auto -10% -55% auto;width:34rem;height:34rem;border-radius:50%;
+  background:radial-gradient(circle,rgba(220,178,87,.32),rgba(220,178,87,0) 65%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:1.3rem}
+.hero .eyebrow{color:#e3c47c}
+.hero h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2.6rem,9vw,4.6rem);line-height:1.02;letter-spacing:.01em}
+.hero .lede{font-size:1.3rem;font-style:italic;max-width:36rem;color:#d6daf0}
+.byline{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-family:var(--f-ui);font-size:.95rem;color:#c5cae6;border-top:1px solid rgba(227,196,124,.35);padding-top:1rem}
+.byline b{color:#fff;font-weight:600}
+
+/* Audio */
+.player{background:var(--paper);border:1px solid var(--rule);border-radius:14px;margin-top:-1.8rem;position:relative;padding:1rem 1.1rem;
+  display:grid;grid-template-columns:auto 1fr;gap:.4rem 1rem;align-items:center;box-shadow:0 10px 30px -18px rgba(20,20,60,.45)}
+.play{width:3.2rem;height:3.2rem;border-radius:50%;border:0;background:var(--gold);color:#fff;cursor:pointer;grid-row:span 2;display:grid;place-items:center}
+.play:focus-visible,.seek:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.play svg{width:1.2rem;height:1.2rem;fill:currentColor}
+.ptitle{font-family:var(--f-ui);font-size:.92rem;font-weight:500;min-width:0}
+.prow{display:flex;align-items:center;gap:.7rem;min-width:0}
+.seek{flex:1;min-width:0;accent-color:var(--gold)}
+.time{font-family:var(--f-ui);font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* Sections */
+main{padding-block:3rem 1rem}
+.part{display:grid;gap:1rem;padding-block:2.4rem;border-bottom:1px solid var(--rule)}
+.part:last-of-type{border-bottom:0}
+.part .eyebrow{color:var(--gold)}
+.part h2{font-family:var(--f-body);font-weight:700;font-size:clamp(1.7rem,4.5vw,2.2rem);line-height:1.15}
+.part p{max-width:65ch}
+.quote{font-size:1.45rem;line-height:1.4;font-style:italic;color:var(--lapis);border-left:3px solid var(--gold);padding-left:1.1rem}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .quote{color:#c9cff5}}
+:root[data-theme="dark"] .quote{color:#c9cff5}
+.ref{font-family:var(--f-ui);font-size:.8rem;color:var(--muted);font-style:normal;display:block;margin-top:.4rem;letter-spacing:.04em}
+
+/* Story */
+.story{background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:1.4rem 1.4rem 1.5rem;display:grid;gap:.85rem}
+.story h3{font-family:var(--f-ui);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.story p{font-size:1.08rem}
+.story .turn{font-weight:700}
+
+/* Have list */
+.have{display:flex;flex-wrap:wrap;gap:.45rem;padding:0;margin:0;list-style:none}
+.have li{font-family:var(--f-ui);font-size:.88rem;border:1px solid var(--gold-soft);border-radius:999px;padding:.2rem .75rem}
+
+/* Infographic */
+.figure{margin:0;display:grid;gap:.6rem}
+.figure img{width:100%;height:auto;border-radius:10px;border:1px solid var(--rule);display:block}
+.figure figcaption{font-family:var(--f-ui);font-size:.85rem;color:var(--muted)}
+.figure a{color:inherit}
+
+/* Invitations */
+.invite{background:var(--lapis);color:var(--lapis-ink);padding-block:3rem;margin-top:1.5rem}
+.invite .wrap{display:grid;gap:1.6rem}
+.invite h2{font-family:var(--f-display);font-weight:400;font-size:clamp(1.8rem,6vw,2.6rem)}
+.invite ol{list-style:none;margin:0;padding:0;display:grid;gap:1.2rem;counter-reset:q}
+.invite li{counter-increment:q;display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;align-items:start}
+.invite li::before{content:counter(q);font-family:var(--f-display);font-size:1.6rem;color:#e3c47c;line-height:1.1}
+.invite li p{min-width:0}
+.invite small{display:block;font-family:var(--f-ui);font-size:.85rem;color:#b9bfe0;margin-top:.25rem}
+
+/* Full text */
+details{margin-block:2.5rem 1rem;background:var(--paper);border:1px solid var(--rule);border-radius:14px}
+summary{cursor:pointer;padding:1.1rem 1.3rem;font-family:var(--f-ui);font-weight:600;font-size:1rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"−"}
+.full{padding:0 1.3rem 1.5rem;display:grid;gap:1rem;font-size:1.05rem}
+.full p{max-width:65ch}
+
+footer{padding-block:2rem 3rem;font-family:var(--f-ui);font-size:.85rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem}
+@media (prefers-reduced-motion:no-preference){.hero h1{animation:rise .9s ease-out both}@keyframes rise{from{opacity:.2;transform:translateY(10px)}to{opacity:1;transform:none}}}
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Проповідь · 50-ліття парафії</span>
+    <h1>Бог посилає вас</h1>
+    <p class="lede">Чого насправді прагне людська душа, і чому ми приходимо до церкви.</p>
+    <div class="byline"><span><b>Владика Браян Байда</b></span><span>Єпарх Торонтський і Східної Канади, УГКЦ</span></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="player" role="group" aria-label="Аудіозапис проповіді">
+    <button class="play" id="play" aria-label="Слухати проповідь">
+      <svg id="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
+    </button>
+    <div class="ptitle">Аудіозапис проповіді</div>
+    <div class="prow">
+      <input class="seek" id="seek" type="range" min="0" max="861" value="0" step="1" aria-label="Позиція в записі">
+      <span class="time" id="time">0:00 / 14:21</span>
+    </div>
+    <audio id="aud" src="homily.mp3" preload="metadata"></audio>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="part">
+    <span class="eyebrow">Скінченне і безкінечне</span>
+    <h2>Як довго ви цього прагнули?</h2>
+    <p>Владика починає з прохання: дослідити свій розум і своє серце та обрати, можливо, найважливішу річ, якої ви коли-небудь прагнули. І запитати себе, як довго. Десять хвилин? Два роки? Двадцять? А може, й п'ятдесят?</p>
+    <p>Він згадує отця Петра Ґаладзу: людину, яка зробила так багато і яку Бог благословив чудовою родиною. «Але завжди є це відчуття, що цього недостатньо».</p>
+    <p class="quote">«Немає жодної людини і жодної речі, яка могла б задовольнити це бажання, окрім Того, Хто є безкінечним».</p>
+  </section>
+
+  <section class="part">
+    <span class="eyebrow">Вічне життя</span>
+    <h2>Вічне життя — це стосунки</h2>
+    <p>Стосунки з Тим, Хто є Божественним, не має початку і не має кінця. Усі стосунки, які ми маємо, особливо в наших сім'ях, Бог дає нам як практику. «Дуже багато практики». Вони спрямовані на одне: розвинути стосунки з Ісусом Христом.</p>
+    <p class="quote">«…щоб пізнали Вас як єдиного істинного Бога та Ісуса Христа, Якого Ви послали».<span class="ref">Ів. 17:3, як його цитує Владика</span></p>
+    <p>Ніхто з нас не безгрішний, усі ми недосконалі. Саме тому ми належимо до парафії, яка вже 50 років працює над цими стосунками з Ісусом Христом. «У цьому весь сенс».</p>
+  </section>
+
+  <section class="part">
+    <span class="eyebrow">Бог промовляє через людей</span>
+    <h2>Хто промовлятиме до вас сьогодні?</h2>
+    <p>Дитина, людина похилого віку, оператор, хтось, хто служить за столом чи співає пісню. Бог промовлятиме через когось, і ця людина, ймовірно, навіть не знатиме про це. «Часто Бог привертає мою увагу через людей, які мене дратують», каже Владика.</p>
+    <div class="story">
+      <h3>Історія про Деніз</h3>
+      <p>Біля магазину жінка шукала недопалки. Владика знав її з центру «Ласкаво просимо додому» (Welcome Home), де приймали людей, яким важко знайти житло. Запросив її повертатися, купив продукти, а тоді вирішив купити їй цигарки: «Деніз, які ти любиш?» — «Players».</p>
+      <p>Вона подивилася на пачку і віддала назад: «…але це не king size».</p>
+      <p>«Я сів у мікроавтобус і подумав те саме, що ви думаєте зараз: яка ти невдячна людина!» І одразу: <span class="turn">«Вибач, Ісусе. Хто тут невдячний?»</span></p>
+      <ul class="have" aria-label="Що має Владика, за його словами">
+        <li>родина</li><li>батьки</li><li>авто</li><li>засоби для існування</li><li>тепле місце для сну</li><li>освіта</li>
+      </ul>
+      <p>«Деніз точно не знала, що Бог використав її, щоб промовити до мене того дня. І так само, ймовірно, з кожним із вас. Бог використає вас».</p>
+    </div>
+  </section>
+
+  <section class="part">
+    <span class="eyebrow">Послані</span>
+    <h2>Ось чому ми збираємося разом</h2>
+    <p>Не через те, як я хочу почуватися наприкінці неділі. Бог хоче використати ваш приклад, щоб підняти когось і поставити комусь виклик.</p>
+    <p class="quote">«Бог Отець послав Ісуса. Він посилає нас».</p>
+    <p>Тож у наступні 25 чи 50 років приходьте, тому що Бог посилає вас. Належіть до будь-якої організації, тому що Бог посилає вас. Ви належите до своєї родини, тому що Бог послав вас. Це може давати гарне самопочуття і задовольняти прагнення належати, «але понад усе, якщо ви хочете бути схожими на Ісуса, йдіть, тому що Отець послав вас».</p>
+  </section>
+
+  <section class="part">
+    <span class="eyebrow">Інфографіка</span>
+    <h2>Прагнення людської душі</h2>
+    <figure class="figure">
+      <a href="infographic.jpg" target="_blank" rel="noopener"><img src="infographic.jpg" alt="Інфографіка «Скінченне чи Нескінченне: Чого насправді прагне людська душа?»: скінченні земні бажання та відчуття «ніколи не досить» ліворуч; праворуч вічне життя як стосунки з Богом, Бог привертає увагу через інших, покликання бути «посланим»." width="2200" height="1228" loading="lazy"></a>
+      <figcaption>Натисніть, щоб відкрити у повному розмірі.</figcaption>
+    </figure>
+  </section>
+</main>
+
+<section class="invite" aria-labelledby="inv">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#e3c47c">До роздумів</span>
+    <h2 id="inv">Три запрошення Владики</h2>
+    <ol>
+      <li><p>Оберіть найважливішу річ, якої ви прагнули, і запитайте: як довго?<small>Чи є щось більше, чого б ви хотіли, ніж вічні стосунки з Ісусом Христом?</small></p></li>
+      <li><p>Оберіть одну людину, яка вже відійшла у вічність і через яку Бог промовляв до вас.<small>Помоліться за неї і згадайте, що саме Бог сказав через неї.</small></p></li>
+      <li><p>Будьте уважні: сьогодні Бог промовлятиме до вас через когось поруч.<small>І, можливо, через вас до когось іншого.</small></p></li>
+    </ol>
+  </div>
+</section>
+
+<div class="wrap">
+  <details>
+    <summary>Повний текст проповіді</summary>
+    <div class="full">
+      <p>Слава Ісусу Христу! — Слава навіки!</p>
+      <p>Сьогодні я хочу розпочати з того, щоб ви дослідили свій розум і своє серце. Я хочу, щоб ви обрали, можливо, найважливішу річ, про яку ви коли-небудь прагнули. Чого ви хотіли? І, можливо, кращий спосіб подивитися на це — це запитати: як довго? Як довго я цього прагнув? Чи я хотів цього протягом 10 хвилин? Чи шукав я цього останні два роки? Чи чекав я на це останні 20 років або й довше? Якщо ви старші, можливо, ви прагнули цього 50 років.</p>
+      <p>Подивіться на отця Петра — отця Петра Ґаладзу. Чого він прагнув? Він зробив так багато. Він прагнув стільки речей. Чого він міг би справді, справді, справді хотіти? Бог благословив його стількома речами: чудовою родиною. Але завжди є це відчуття, що цього недостатньо.</p>
+      <p>Чого б ви могли прагнути? Ні, немає жодної людини і жодної речі, яка могла б задовольнити це бажання, окрім Того, Хто є безкінечним. Це і є вічне життя. Хто цього не хоче? Це і є вічне життя — це стосунки. Це вічне життя: стосунки з Тим, Хто є Божественним, не має початку і не має кінця. Божественні стосунки з вами, щоб пізнали Вас як єдиного істинного Бога та Ісуса Христа, Якого Ви послали.</p>
+      <p>Я закликаю кожного у цій прекрасній церкві цим ранком задуматися, чи є щось більше, чого б ви хотіли, ніж вічні стосунки з Ісусом Христом? І Бог робить це можливим. Він дає нам багато практики. Дуже багато практики. Усі ці стосунки, які ми маємо, особливо в наших сім'ях, спрямовані лише на одне — розвинути стосунки з Ісусом Христом, тому що це і є вічне життя.</p>
+      <p>І кожен у цій прекрасній церкві сьогодні перебуває у стосунках один з одним. Кожен із нас тут має не просто якісь стосунки десь там у світі. Це є проявом тих стосунків, яких Ісус прагне з вами — вічних стосунків. Знову ж таки, жоден із нас у цій прекрасній церкві не є безгрішним. При всій повазі до ангелів, святих та Матері Божої, які таємниче присутні з нами тут, усі ми на цьому земному рівні є грішниками. Ми є недосконалими.</p>
+      <p>І саме тому ми належимо до такої парафії, яка зараз святкує 50 років праці над цими стосунками з Ісусом Христом. У цьому весь сенс. Це і є мотив. Тому сьогодні, у цей ювілей, ми маємо багато про що згадати. Про людей, які заснували цю парафію, про людей, які допомогли нам пізнати Бога як єдиного істинного Бога та пізнати Ісуса Христа, і які тепер відійшли у вічність.</p>
+      <p>Тому я хочу, щоб ви обрали одну людину, яка вже відійшла у вічність. Люди, які відійшли, більше не з нами тут, на цьому земному рівні, а живуть у вічності. Кого з них Бог дійсно виділив і сказав: «Я обираю тебе, щоб сказати людині тут сьогодні, що Я є Ісус Христос, що Я був посланий Отцем, щоб пізнати Його як вічне життя»? Помоліться за цю людину. Помоліться і згадайте, як Бог промовляв до вас через цю людину. Це станеться знову сьогодні.</p>
+      <p>Бог промовлятиме до вас через когось тут, щоб ви знали, що Бог — єдиний Бог, єдиний істинний Бог, Який створив усе, Який є любов'ю, і Який послав Ісуса Христа. Хтось вигукне це вам своїми вчинками, і вони, ймовірно, навіть не знатимуть про це. Чи це буде дитина? Чи це буде людина похилого віку? Чи це буде оператор? Чи це буде хтось, хто служить за столом? Чи це буде хтось, хто співає пісню? Хто промовлятиме до вас? Бог дійсно намагається привернути вашу увагу.</p>
+      <p>Часто Бог привертає мою увагу через людей, які мене дратують, яких я не можу терпіти, з якими не хочу розмовляти, які бурчать на мене чи щось подібне. І, звісно, ти звертаєшся до молитви, а Бог каже: «Ну от, нарешті я привернув твою увагу. Нарешті ти змушуєш мене щоразу йти до крайнощів». «Нарешті я привернув твою увагу».</p>
+      <p>Одна пані шукала цигарки — я вже розповідав цю історію раніше — біля магазину, і я підійшов, а я знаю її, бо вона відвідувала центр «Ласкаво просимо додому» (Welcome Home), де ми приймали людей, які мають труднощі із пошуком житла. Я побачив її і спитав: «Я можу вам допомогти? Ви щось шукаєте?» Вона каже: «О, ні. Я просто шукаю недопалки». Добре. Ну, я не бачив вас у центрі. Приходьте. Приходьте, ми за вами сумуємо.</p>
+      <p>Я пішов, купив продукти. Запросив її знову. Сів у машину, поклав продукти в авто. Дивлюся на неї і думаю: «Мабуть, це не найкраща ідея, але добре, я куплю їй сигарети». Тож я підійшов до неї і сказав: «Деніз, які сигарети ти любиш курити?» — «Е-е, Players». Добре. Я зайшов до магазину, купив Players, узяв коробку сірників, вийшов назад, віддав їй, а вона взяла їх, подивилася і віддає їх мені назад. Я сказав: «О, вибачте. Я думав, ви казали, що вам подобаються Players». — «Так... але це не king size». — «О, вибачте. Ну, це все, що у мене є».</p>
+      <p>Я сів у мікроавтобус і подумав те саме, що ви думаєте зараз: «Свята громадо! Серйозно? Ну справді, яка ти невдячна людина!» Одразу: вибач, Ісусе. Вибач, вибач, вибач. Він промовляє через людей, щоб привернути нашу увагу. Хто тут невдячний, а? У мене є родина. У мене є батьки. У мене є авто. У мене є засоби для існування. У мене є тепле місце для сну. У мене є освіта. Матеріальних потреб я не маю, лише духовні. Вони потрапляють у наші серця, і ми ніколи не відчуємо, що належимо достатньо. Ми прагнемо бути частиною чогось, і Бог мусив привернути мою увагу через цю людину.</p>
+      <p>І так у минулому та теперішньому в цій парафії Бог промовляє через вас до іншої людини. І Деніз точно не знала, що Бог використав її, щоб промовити до мене того дня, тієї миті. Вона й гадки не мала. І так само, ймовірно, з кожним із вас. Бог використає вас. Ось чому ми приходимо до церкви.</p>
+      <p>Не через те, чого я хочу або як я хочу почуватися наприкінці неділі, чи коли я відчуваю задоволення від того, що пішов і прославив Бога. Ні, ні. Він посилає вас, тому що хоче використати вас перед кимось. Він хоче використати ваш приклад, щоб підняти когось, щоб поставити комусь виклик. Ось чому ми збираємося разом — бо ми послані. Ми послані. Бог Отець послав Ісуса. Він посилає нас.</p>
+      <p>І тому, рухаючись уперед у цій парафії в наступні 25 чи 50 років, приходьте, тому що Бог посилає вас; належіть до будь-якої організації, тому що Бог посилає вас; ви належите до своєї родини, тому що Бог послав вас. Так, це може зачіпати ваші почуття. Це може давати вам гарне самопочуття. Це може задовольняти деякі ваші життєві прагнення — належати та мати стосунки. Але понад усе, якщо ви хочете бути схожими на Ісуса, йдіть, тому що Отець послав вас.</p>
+      <p>І решту цього прекрасного читання вам слід читати знову, і знову, і знову, і знову. Бог посилає вас. Тож сьогодні той день, коли ми дякуємо за всіх людей, які були послані, і за те, що Бог посилає нас сьогодні.</p>
+      <p>В ім'я Отця, і Сина, і Святого Духа. Амінь.</p>
+    </div>
+  </details>
+</div>
+
+<footer>
+  <div class="wrap"><span>Проповідь Владики Браяна Байди на 50-ліття парафії</span><a href="/" style="color:inherit">← apostol.ua</a></div>
+</footer>
+
+<script>
+(function(){
+  var a=document.getElementById('aud'),b=document.getElementById('play'),s=document.getElementById('seek'),t=document.getElementById('time'),ico=document.getElementById('ico');
+  var PLAY='<path d="M7 4.5v15l13-7.5z"/>',PAUSE='<path d="M6 4.5h4v15H6zM14 4.5h4v15h-4z"/>';
+  function f(x){x=Math.max(0,Math.floor(x||0));return Math.floor(x/60)+':'+String(x%60).padStart(2,'0')}
+  function dur(){return isFinite(a.duration)&&a.duration>0?a.duration:861}
+  function upd(){s.max=Math.floor(dur());s.value=Math.floor(a.currentTime);t.textContent=f(a.currentTime)+' / '+f(dur())}
+  b.addEventListener('click',function(){if(a.paused){var p=a.play();if(p&&p.catch)p.catch(function(){})}else a.pause()});
+  a.addEventListener('play',function(){ico.innerHTML=PAUSE;b.setAttribute('aria-label','Пауза')});
+  a.addEventListener('pause',function(){ico.innerHTML=PLAY;b.setAttribute('aria-label','Слухати проповідь')});
+  a.addEventListener('timeupdate',upd);a.addEventListener('loadedmetadata',upd);
+  s.addEventListener('input',function(){a.currentTime=+s.value;upd()});
+})();
+</script>
+
+</body></html>
