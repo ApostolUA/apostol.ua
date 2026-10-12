@@ -1,242 +1,122 @@
-<!doctype html><html lang="uk"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Бог посилає вас</title>
+<!doctype html><html lang="uk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Торонто · apostol.ua</title>
+<meta name="description" content="Анонси й новини УГКЦ і української громади у Торонто">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Fira+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: one reading column like an iconostasis tier; lapis ground for hero & invitations, parchment for the word itself */
-:root{
-  --bg:#f3f0f6;
-  --paper:#fbfaf7;
-  --ink:#1d1a2b;
-  --muted:#5d5873;
-  --lapis:#23306b;
-  --lapis-ink:#eef0fb;
-  --gold:#b0811f;
-  --gold-soft:#e8d6a6;
-  --rule:#d9d3e3;
-  --f-display:"Ruslan Display","Alegreya",Georgia,serif;
-  --f-body:"Alegreya",Georgia,"Times New Roman",serif;
-  --f-ui:"Fira Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#12111c;--paper:#1a1928;--ink:#ebe8f2;--muted:#a9a3bf;--lapis:#1c2557;--lapis-ink:#eef0fb;
-  --gold:#dcb257;--gold-soft:#5a4a24;--rule:#2f2d42;color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#12111c;--paper:#1a1928;--ink:#ebe8f2;--muted:#a9a3bf;--lapis:#1c2557;--lapis-ink:#eef0fb;
-  --gold:#dcb257;--gold-soft:#5a4a24;--rule:#2f2d42;color-scheme:dark}
-
+:root{--bg:#f3f0f6;--paper:#fbfaf7;--ink:#1d1a2b;--muted:#5d5873;--lapis:#23306b;--lapis-ink:#eef0fb;
+--gold:#b0811f;--gold-soft:#e8d6a6;--rule:#d9d3e3;--date:#23306b;
+--f-display:"Ruslan Display","Alegreya",Georgia,serif;--f-body:"Alegreya",Georgia,"Times New Roman",serif;
+--f-ui:"Fira Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12111c;--paper:#1a1928;--ink:#ebe8f2;--muted:#a9a3bf;
+--lapis:#1c2557;--gold:#dcb257;--gold-soft:#5a4a24;--rule:#2f2d42;--date:#c9cff5;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12111c;--paper:#1a1928;--ink:#ebe8f2;--muted:#a9a3bf;--lapis:#1c2557;--gold:#dcb257;
+--gold-soft:#5a4a24;--rule:#2f2d42;--date:#c9cff5;color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.15rem;line-height:1.6;margin:0}
 .wrap{max-width:46rem;margin:0 auto;padding-inline:20px}
-h1,h2,h3{text-wrap:balance;margin:0}
-p{margin:0}
+h1,h2,h3{text-wrap:balance;margin:0}p{margin:0}a{color:inherit}
 .eyebrow{font-family:var(--f-ui);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
-
-/* Hero */
-.hero{background:var(--lapis);color:var(--lapis-ink);padding-block:4.5rem 3.5rem;position:relative;overflow:hidden}
+.hero{background:var(--lapis);color:var(--lapis-ink);padding-block:3.5rem 2.6rem;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:auto -10% -55% auto;width:34rem;height:34rem;border-radius:50%;
-  background:radial-gradient(circle,rgba(220,178,87,.32),rgba(220,178,87,0) 65%);pointer-events:none}
-.hero .wrap{position:relative;display:grid;gap:1.3rem}
-.hero .eyebrow{color:#e3c47c}
-.hero h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2.6rem,9vw,4.6rem);line-height:1.02;letter-spacing:.01em}
-.hero .lede{font-size:1.3rem;font-style:italic;max-width:36rem;color:#d6daf0}
-.byline{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-family:var(--f-ui);font-size:.95rem;color:#c5cae6;border-top:1px solid rgba(227,196,124,.35);padding-top:1rem}
-.byline b{color:#fff;font-weight:600}
-
-/* Audio */
-.player{background:var(--paper);border:1px solid var(--rule);border-radius:14px;margin-top:-1.8rem;position:relative;padding:1rem 1.1rem;
-  display:grid;grid-template-columns:auto 1fr;gap:.4rem 1rem;align-items:center;box-shadow:0 10px 30px -18px rgba(20,20,60,.45)}
-.play{width:3.2rem;height:3.2rem;border-radius:50%;border:0;background:var(--gold);color:#fff;cursor:pointer;grid-row:span 2;display:grid;place-items:center}
-.play:focus-visible,.seek:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.play svg{width:1.2rem;height:1.2rem;fill:currentColor}
-.ptitle{font-family:var(--f-ui);font-size:.92rem;font-weight:500;min-width:0}
-.prow{display:flex;align-items:center;gap:.7rem;min-width:0}
-.seek{flex:1;min-width:0;accent-color:var(--gold)}
-.time{font-family:var(--f-ui);font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
-
-/* Sections */
-main{padding-block:3rem 1rem}
-.part{display:grid;gap:1rem;padding-block:2.4rem;border-bottom:1px solid var(--rule)}
-.part:last-of-type{border-bottom:0}
-.part .eyebrow{color:var(--gold)}
-.part h2{font-family:var(--f-body);font-weight:700;font-size:clamp(1.7rem,4.5vw,2.2rem);line-height:1.15}
-.part p{max-width:65ch}
-.quote{font-size:1.45rem;line-height:1.4;font-style:italic;color:var(--lapis);border-left:3px solid var(--gold);padding-left:1.1rem}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .quote{color:#c9cff5}}
-:root[data-theme="dark"] .quote{color:#c9cff5}
-.ref{font-family:var(--f-ui);font-size:.8rem;color:var(--muted);font-style:normal;display:block;margin-top:.4rem;letter-spacing:.04em}
-
-/* Story */
-.story{background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:1.4rem 1.4rem 1.5rem;display:grid;gap:.85rem}
-.story h3{font-family:var(--f-ui);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-.story p{font-size:1.08rem}
-.story .turn{font-weight:700}
-
-/* Have list */
-.have{display:flex;flex-wrap:wrap;gap:.45rem;padding:0;margin:0;list-style:none}
-.have li{font-family:var(--f-ui);font-size:.88rem;border:1px solid var(--gold-soft);border-radius:999px;padding:.2rem .75rem}
-
-/* Infographic */
-.figure{margin:0;display:grid;gap:.6rem}
-.figure img{width:100%;height:auto;border-radius:10px;border:1px solid var(--rule);display:block}
-.figure figcaption{font-family:var(--f-ui);font-size:.85rem;color:var(--muted)}
-.figure a{color:inherit}
-
-/* Invitations */
-.invite{background:var(--lapis);color:var(--lapis-ink);padding-block:3rem;margin-top:1.5rem}
-.invite .wrap{display:grid;gap:1.6rem}
-.invite h2{font-family:var(--f-display);font-weight:400;font-size:clamp(1.8rem,6vw,2.6rem)}
-.invite ol{list-style:none;margin:0;padding:0;display:grid;gap:1.2rem;counter-reset:q}
-.invite li{counter-increment:q;display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;align-items:start}
-.invite li::before{content:counter(q);font-family:var(--f-display);font-size:1.6rem;color:#e3c47c;line-height:1.1}
-.invite li p{min-width:0}
-.invite small{display:block;font-family:var(--f-ui);font-size:.85rem;color:#b9bfe0;margin-top:.25rem}
-
-/* Full text */
-details{margin-block:2.5rem 1rem;background:var(--paper);border:1px solid var(--rule);border-radius:14px}
-summary{cursor:pointer;padding:1.1rem 1.3rem;font-family:var(--f-ui);font-weight:600;font-size:1rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--gold);font-size:1.3rem;line-height:1}
-details[open] summary::after{content:"−"}
-.full{padding:0 1.3rem 1.5rem;display:grid;gap:1rem;font-size:1.05rem}
-.full p{max-width:65ch}
-
+background:radial-gradient(circle,rgba(220,178,87,.32),rgba(220,178,87,0) 65%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:1rem}
+.crumbs{font-family:var(--f-ui);font-size:.85rem;color:#c5cae6;display:flex;flex-wrap:wrap;gap:.3rem .6rem}
+.crumbs a{color:#e3c47c;text-decoration:none}
+.hero h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2.4rem,8vw,4rem);line-height:1.05}
+.hero .lede{font-size:1.15rem;font-style:italic;color:#d6daf0;max-width:36rem}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip{font-family:var(--f-ui);font-size:.88rem;border:1px solid rgba(227,196,124,.55);color:#eef0fb;background:transparent;
+border-radius:999px;padding:.3rem .85rem;cursor:pointer;text-decoration:none}
+.chip[aria-pressed="true"],.chip.on{background:#e3c47c;color:#1d1a2b;border-color:#e3c47c}
+.chip:focus-visible{outline:3px solid #e3c47c;outline-offset:2px}
+main{padding-block:2.2rem 1rem}
+.sec{margin-bottom:2.5rem}
+.sec>h2{font-family:var(--f-display);font-weight:400;font-size:clamp(1.7rem,6vw,2.3rem);margin-bottom:1rem}
+.month{font-family:var(--f-ui);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:1.6rem 0 .7rem}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:1.1rem 1.2rem}
+.ev{display:grid;grid-template-columns:3.6rem 1fr;gap:1rem;align-items:start}
+.date{text-align:center;border-right:1px solid var(--rule);padding-right:.9rem}
+.date b{display:block;font-family:var(--f-display);font-weight:400;font-size:2rem;line-height:1;color:var(--date)}
+.date span{font-family:var(--f-ui);font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.body{min-width:0;display:grid;gap:.35rem}
+.card h3{font-family:var(--f-body);font-weight:700;font-size:1.3rem;line-height:1.2}
+.card h3 a{text-decoration:none}.card h3 a:hover{text-decoration:underline}
+.meta{font-family:var(--f-ui);font-size:.88rem;color:var(--muted)}
+.card p{font-size:1.05rem}
+.src{font-family:var(--f-ui);font-size:.78rem;color:var(--muted)}
+.tag{font-family:var(--f-ui);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.poster{width:100%;height:auto;border-radius:10px;border:1px solid var(--rule);display:block;margin-bottom:.4rem}
+.news .card{display:grid;gap:.5rem}
+.view{display:flex;justify-content:flex-end;gap:.4rem;margin-bottom:1rem;font-family:var(--f-ui);font-size:.85rem;color:var(--muted);align-items:center}
+.view button{font:inherit;border:1px solid var(--rule);background:var(--paper);color:var(--ink);border-radius:8px;padding:.3rem .7rem;cursor:pointer;display:inline-flex;gap:.35rem;align-items:center}
+.view button[aria-pressed="true"]{border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold)}
+.view svg{width:1rem;height:1rem;fill:currentColor}
+.compact .card{position:relative}
+.compact .ev .body,.compact .news .card{grid-template-columns:1fr 4.5rem;column-gap:.8rem}
+.compact .ev{grid-template-columns:2.6rem 1fr;gap:.7rem}.compact .date{padding-right:.6rem}.compact .date b{font-size:1.6rem}
+.compact .card p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.compact .poster{grid-column:2;grid-row:1/span 6;width:4.5rem;height:4.5rem;object-fit:cover;margin:0;align-self:start}
+.compact .body>*:not(.poster),.compact .news .card>*:not(.poster){grid-column:1}
+.empty{font-family:var(--f-ui);color:var(--muted);font-size:.95rem}
+[hidden]{display:none!important}
 footer{padding-block:2rem 3rem;font-family:var(--f-ui);font-size:.85rem;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem}
-@media (prefers-reduced-motion:no-preference){.hero h1{animation:rise .9s ease-out both}@keyframes rise{from{opacity:.2;transform:translateY(10px)}to{opacity:1;transform:none}}}
-.copy{display:inline-block;width:.72em;height:.72em;vertical-align:baseline;margin-right:.08em}.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-</style>
-
-<header class="hero">
-  <div class="wrap">
-    <span class="eyebrow">Проповідь · 50-ліття парафії святого пророка Іллі, Бремптон (Онтаріо) · 11 жовтня 2026</span>
-    <h1>Бог посилає вас</h1>
-    <p class="lede">Чого насправді прагне людська душа, і чому ми приходимо до церкви.</p>
-    <div class="byline"><span><b>Владика Браян Байда</b></span><span>Єпарх Торонтський і Східної Канади, УГКЦ</span></div>
-  </div>
-</header>
-
-<div class="wrap">
-  <div class="player" role="group" aria-label="Аудіозапис проповіді">
-    <button class="play" id="play" aria-label="Слухати проповідь">
-      <svg id="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
-    </button>
-    <div class="ptitle">Аудіозапис проповіді</div>
-    <div class="prow">
-      <input class="seek" id="seek" type="range" min="0" max="861" value="0" step="1" aria-label="Позиція в записі">
-      <span class="time" id="time">0:00 / 14:21</span>
-    </div>
-    <audio id="aud" src="homily.mp3" preload="metadata"></audio>
-  </div>
-</div>
-
+.copy{display:inline-block;width:.72em;height:.72em;vertical-align:baseline;margin-right:.08em}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style></head><body>
+<header class="hero"><div class="wrap">
+<nav class="crumbs" aria-label="Розділи"><a href="/">apostol.ua</a><span>/</span><a href="/ca/">Канада</a><span>/</span><span>Торонто</span></nav>
+<h1>Торонто</h1><p class="lede">Анонси й новини церкви та української громади у Торонто.</p><div class="chips"><a class="chip on" href="/ca/toronto/">Торонто</a><a class="chip" href="/ca/mississauga/">Міссісага</a></div>
+</div></header>
 <main class="wrap">
-  <section class="part">
-    <h2>Прагнення людської душі</h2>
-    <figure class="figure">
-      <a href="infographic.jpg" target="_blank" rel="noopener" title="Відкрити у повному розмірі" style="cursor:zoom-in"><img src="infographic.jpg" alt="Інфографіка «Скінченне чи Нескінченне: Чого насправді прагне людська душа?»: скінченні земні бажання та відчуття «ніколи не досить» ліворуч; праворуч вічне життя як стосунки з Богом, Бог привертає увагу через інших, покликання бути «посланим»." width="2200" height="1228"></a>
-    </figure>
-  </section>
-  <section class="part">
-    <span class="eyebrow">Скінченне і безкінечне</span>
-    <h2>Як довго ви цього прагнули?</h2>
-    <p>Владика починає з прохання: дослідити свій розум і своє серце та обрати, можливо, найважливішу річ, якої ви коли-небудь прагнули. І запитати себе, як довго. Десять хвилин? Два роки? Двадцять? А може, й п'ятдесят?</p>
-    <p>Він згадує отця Петра Ґаладзу: людину, яка зробила так багато і яку Бог благословив чудовою родиною. «Але завжди є це відчуття, що цього недостатньо».</p>
-    <p class="quote">«Немає жодної людини і жодної речі, яка могла б задовольнити це бажання, окрім Того, Хто є безкінечним».</p>
-  </section>
-
-  <section class="part">
-    <span class="eyebrow">Вічне життя</span>
-    <h2>Вічне життя — це стосунки</h2>
-    <p>Стосунки з Тим, Хто є Божественним, не має початку і не має кінця. Усі стосунки, які ми маємо, особливо в наших сім'ях, Бог дає нам як практику. «Дуже багато практики». Вони спрямовані на одне: розвинути стосунки з Ісусом Христом.</p>
-    <p class="quote">«…щоб пізнали Вас як єдиного істинного Бога та Ісуса Христа, Якого Ви послали».<span class="ref">Ів. 17:3, як його цитує Владика</span></p>
-    <p>Ніхто з нас не безгрішний, усі ми недосконалі. Саме тому ми належимо до парафії, яка вже 50 років працює над цими стосунками з Ісусом Христом. «У цьому весь сенс».</p>
-  </section>
-
-  <section class="part">
-    <span class="eyebrow">Бог промовляє через людей</span>
-    <h2>Хто промовлятиме до вас сьогодні?</h2>
-    <p>Дитина, людина похилого віку, оператор, хтось, хто служить за столом чи співає пісню. Бог промовлятиме через когось, і ця людина, ймовірно, навіть не знатиме про це. «Часто Бог привертає мою увагу через людей, які мене дратують», каже Владика.</p>
-    <div class="story">
-      <h3>Історія про Деніз</h3>
-      <p>Біля магазину жінка шукала недопалки. Владика знав її з центру «Ласкаво просимо додому» (Welcome Home), де приймали людей, яким важко знайти житло. Запросив її повертатися, купив продукти, а тоді вирішив купити їй цигарки: «Деніз, які ти любиш?» — «Players».</p>
-      <p>Вона подивилася на пачку і віддала назад: «…але це не king size».</p>
-      <p>«Я сів у мікроавтобус і подумав те саме, що ви думаєте зараз: яка ти невдячна людина!» І одразу: <span class="turn">«Вибач, Ісусе. Хто тут невдячний?»</span></p>
-      <ul class="have" aria-label="Що має Владика, за його словами">
-        <li>родина</li><li>батьки</li><li>авто</li><li>засоби для існування</li><li>тепле місце для сну</li><li>освіта</li>
-      </ul>
-      <p>«Деніз точно не знала, що Бог використав її, щоб промовити до мене того дня. І так само, ймовірно, з кожним із вас. Бог використає вас».</p>
-    </div>
-  </section>
-
-  <section class="part">
-    <span class="eyebrow">Послані</span>
-    <h2>Ось чому ми збираємося разом</h2>
-    <p>Не через те, як я хочу почуватися наприкінці неділі. Бог хоче використати ваш приклад, щоб підняти когось і поставити комусь виклик.</p>
-    <p class="quote">«Бог Отець послав Ісуса. Він посилає нас».</p>
-    <p>Тож у наступні 25 чи 50 років приходьте, тому що Бог посилає вас. Належіть до будь-якої організації, тому що Бог посилає вас. Ви належите до своєї родини, тому що Бог послав вас. Це може давати гарне самопочуття і задовольняти прагнення належати, «але понад усе, якщо ви хочете бути схожими на Ісуса, йдіть, тому що Отець послав вас».</p>
-  </section>
-
-</main>
-
-<section class="invite" aria-labelledby="inv">
-  <div class="wrap">
-    <span class="eyebrow" style="color:#e3c47c">До роздумів</span>
-    <h2 id="inv">Три запрошення Владики</h2>
-    <ol>
-      <li><p>Оберіть найважливішу річ, якої ви прагнули, і запитайте: як довго?<small>Чи є щось більше, чого б ви хотіли, ніж вічні стосунки з Ісусом Христом?</small></p></li>
-      <li><p>Оберіть одну людину, яка вже відійшла у вічність і через яку Бог промовляв до вас.<small>Помоліться за неї і згадайте, що саме Бог сказав через неї.</small></p></li>
-      <li><p>Будьте уважні: сьогодні Бог промовлятиме до вас через когось поруч.<small>І, можливо, через вас до когось іншого.</small></p></li>
-    </ol>
-  </div>
-</section>
-
-<div class="wrap">
-  <details>
-    <summary>Повний текст проповіді</summary>
-    <div class="full">
-      <p>Слава Ісусу Христу! — Слава навіки!</p>
-      <p>Сьогодні я хочу розпочати з того, щоб ви дослідили свій розум і своє серце. Я хочу, щоб ви обрали, можливо, найважливішу річ, про яку ви коли-небудь прагнули. Чого ви хотіли? І, можливо, кращий спосіб подивитися на це — це запитати: як довго? Як довго я цього прагнув? Чи я хотів цього протягом 10 хвилин? Чи шукав я цього останні два роки? Чи чекав я на це останні 20 років або й довше? Якщо ви старші, можливо, ви прагнули цього 50 років.</p>
-      <p>Подивіться на отця Петра — отця Петра Ґаладзу. Чого він прагнув? Він зробив так багато. Він прагнув стільки речей. Чого він міг би справді, справді, справді хотіти? Бог благословив його стількома речами: чудовою родиною. Але завжди є це відчуття, що цього недостатньо.</p>
-      <p>Чого б ви могли прагнути? Ні, немає жодної людини і жодної речі, яка могла б задовольнити це бажання, окрім Того, Хто є безкінечним. Це і є вічне життя. Хто цього не хоче? Це і є вічне життя — це стосунки. Це вічне життя: стосунки з Тим, Хто є Божественним, не має початку і не має кінця. Божественні стосунки з вами, щоб пізнали Вас як єдиного істинного Бога та Ісуса Христа, Якого Ви послали.</p>
-      <p>Я закликаю кожного у цій прекрасній церкві цим ранком задуматися, чи є щось більше, чого б ви хотіли, ніж вічні стосунки з Ісусом Христом? І Бог робить це можливим. Він дає нам багато практики. Дуже багато практики. Усі ці стосунки, які ми маємо, особливо в наших сім'ях, спрямовані лише на одне — розвинути стосунки з Ісусом Христом, тому що це і є вічне життя.</p>
-      <p>І кожен у цій прекрасній церкві сьогодні перебуває у стосунках один з одним. Кожен із нас тут має не просто якісь стосунки десь там у світі. Це є проявом тих стосунків, яких Ісус прагне з вами — вічних стосунків. Знову ж таки, жоден із нас у цій прекрасній церкві не є безгрішним. При всій повазі до ангелів, святих та Матері Божої, які таємниче присутні з нами тут, усі ми на цьому земному рівні є грішниками. Ми є недосконалими.</p>
-      <p>І саме тому ми належимо до такої парафії, яка зараз святкує 50 років праці над цими стосунками з Ісусом Христом. У цьому весь сенс. Це і є мотив. Тому сьогодні, у цей ювілей, ми маємо багато про що згадати. Про людей, які заснували цю парафію, про людей, які допомогли нам пізнати Бога як єдиного істинного Бога та пізнати Ісуса Христа, і які тепер відійшли у вічність.</p>
-      <p>Тому я хочу, щоб ви обрали одну людину, яка вже відійшла у вічність. Люди, які відійшли, більше не з нами тут, на цьому земному рівні, а живуть у вічності. Кого з них Бог дійсно виділив і сказав: «Я обираю тебе, щоб сказати людині тут сьогодні, що Я є Ісус Христос, що Я був посланий Отцем, щоб пізнати Його як вічне життя»? Помоліться за цю людину. Помоліться і згадайте, як Бог промовляв до вас через цю людину. Це станеться знову сьогодні.</p>
-      <p>Бог промовлятиме до вас через когось тут, щоб ви знали, що Бог — єдиний Бог, єдиний істинний Бог, Який створив усе, Який є любов'ю, і Який послав Ісуса Христа. Хтось вигукне це вам своїми вчинками, і вони, ймовірно, навіть не знатимуть про це. Чи це буде дитина? Чи це буде людина похилого віку? Чи це буде оператор? Чи це буде хтось, хто служить за столом? Чи це буде хтось, хто співає пісню? Хто промовлятиме до вас? Бог дійсно намагається привернути вашу увагу.</p>
-      <p>Часто Бог привертає мою увагу через людей, які мене дратують, яких я не можу терпіти, з якими не хочу розмовляти, які бурчать на мене чи щось подібне. І, звісно, ти звертаєшся до молитви, а Бог каже: «Ну от, нарешті я привернув твою увагу. Нарешті ти змушуєш мене щоразу йти до крайнощів». «Нарешті я привернув твою увагу».</p>
-      <p>Одна пані шукала цигарки — я вже розповідав цю історію раніше — біля магазину, і я підійшов, а я знаю її, бо вона відвідувала центр «Ласкаво просимо додому» (Welcome Home), де ми приймали людей, які мають труднощі із пошуком житла. Я побачив її і спитав: «Я можу вам допомогти? Ви щось шукаєте?» Вона каже: «О, ні. Я просто шукаю недопалки». Добре. Ну, я не бачив вас у центрі. Приходьте. Приходьте, ми за вами сумуємо.</p>
-      <p>Я пішов, купив продукти. Запросив її знову. Сів у машину, поклав продукти в авто. Дивлюся на неї і думаю: «Мабуть, це не найкраща ідея, але добре, я куплю їй сигарети». Тож я підійшов до неї і сказав: «Деніз, які сигарети ти любиш курити?» — «Е-е, Players». Добре. Я зайшов до магазину, купив Players, узяв коробку сірників, вийшов назад, віддав їй, а вона взяла їх, подивилася і віддає їх мені назад. Я сказав: «О, вибачте. Я думав, ви казали, що вам подобаються Players». — «Так... але це не king size». — «О, вибачте. Ну, це все, що у мене є».</p>
-      <p>Я сів у мікроавтобус і подумав те саме, що ви думаєте зараз: «Свята громадо! Серйозно? Ну справді, яка ти невдячна людина!» Одразу: вибач, Ісусе. Вибач, вибач, вибач. Він промовляє через людей, щоб привернути нашу увагу. Хто тут невдячний, а? У мене є родина. У мене є батьки. У мене є авто. У мене є засоби для існування. У мене є тепле місце для сну. У мене є освіта. Матеріальних потреб я не маю, лише духовні. Вони потрапляють у наші серця, і ми ніколи не відчуємо, що належимо достатньо. Ми прагнемо бути частиною чогось, і Бог мусив привернути мою увагу через цю людину.</p>
-      <p>І так у минулому та теперішньому в цій парафії Бог промовляє через вас до іншої людини. І Деніз точно не знала, що Бог використав її, щоб промовити до мене того дня, тієї миті. Вона й гадки не мала. І так само, ймовірно, з кожним із вас. Бог використає вас. Ось чому ми приходимо до церкви.</p>
-      <p>Не через те, чого я хочу або як я хочу почуватися наприкінці неділі, чи коли я відчуваю задоволення від того, що пішов і прославив Бога. Ні, ні. Він посилає вас, тому що хоче використати вас перед кимось. Він хоче використати ваш приклад, щоб підняти когось, щоб поставити комусь виклик. Ось чому ми збираємося разом — бо ми послані. Ми послані. Бог Отець послав Ісуса. Він посилає нас.</p>
-      <p>І тому, рухаючись уперед у цій парафії в наступні 25 чи 50 років, приходьте, тому що Бог посилає вас; належіть до будь-якої організації, тому що Бог посилає вас; ви належите до своєї родини, тому що Бог послав вас. Так, це може зачіпати ваші почуття. Це може давати вам гарне самопочуття. Це може задовольняти деякі ваші життєві прагнення — належати та мати стосунки. Але понад усе, якщо ви хочете бути схожими на Ісуса, йдіть, тому що Отець послав вас.</p>
-      <p>І решту цього прекрасного читання вам слід читати знову, і знову, і знову, і знову. Бог посилає вас. Тож сьогодні той день, коли ми дякуємо за всіх людей, які були послані, і за те, що Бог посилає нас сьогодні.</p>
-      <p>В ім'я Отця, і Сина, і Святого Духа. Амінь.</p>
-    </div>
-  </details>
+<div class="view" role="group" aria-label="Вигляд"><span>Вигляд:</span>
+<button type="button" data-view="big" aria-pressed="true"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="9" rx="1.5"/><rect x="1" y="12" width="14" height="3" rx="1"/></svg>Великі афіші</button>
+<button type="button" data-view="compact" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="2" width="9" height="2" rx="1"/><rect x="1" y="6" width="7" height="2" rx="1"/><rect x="11" y="1" width="4" height="4" rx="1"/><rect x="1" y="10" width="9" height="2" rx="1"/><rect x="11" y="9" width="4" height="4" rx="1"/></svg>Іконки збоку</button>
 </div>
-
-<div class="wrap"><a href="podii/" style="display:block;margin-block:1.5rem;font-family:var(--f-ui);font-size:1rem;background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:1rem 1.3rem;color:inherit;text-decoration:none"><span style="color:var(--gold)">●</span> Події громади Торонто і Міссісаги →</a></div>
-
-<footer>
-  <div class="wrap"><span>Проповідь Владики Браяна Байди на 50-ліття парафії святого пророка Іллі</span><span><span class="visually-hidden">©</span><svg class="copy" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13.1 7.4a4 4 0 1 0 0 5.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> 2026 apostol.ua</span></div>
-</footer>
-
+<section class="sec" id="anonsy" aria-labelledby="h-a"><h2 id="h-a">Анонси</h2><h3 class="month">Жовтень 2026</h3><ul class="list"><li class="card ev" data-date="2026-10-15" data-cities="toronto mississauga"><div class="date"><b>15</b><span>чт</span></div><div class="body"><img class="poster" src="https://ucctoronto.ca/storage/img/Oct%2015%20Bishop%27s%20Banquet_page-0001_1787335235.jpg" alt="Афіша бенкету Владики Браяна" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><h3>Щорічний бенкет Владики Браяна Байди</h3><div class="meta">Pearson Convention Centre, 2638 Steeles Ave E, Бремптон</div><p>Благодійний вечір Торонтської єпархії УГКЦ. Кошти підуть на допомогу родинам у потребі та новоприбулим, а також на служіння сім&#x27;ї в єпархії.</p><div class="src">Джерела: <a href="https://ucctoronto.ca/events/blagodiyna-vecherya-vladiki-bishop-s-banquet-2026">календар КУК-Торонто</a>, <a href="https://stspeterandpaul.com/~stspete1/wp-content/uploads/2026/10/Bulletin-26-10-11.pdf">бюлетень парафії святих апостолів Петра і Павла, 11.10.2026</a> · Квитки: <a href="https://ucet.ca/bishop-bryan/bishops-annual-banquet/">ucet.ca</a></div></div></li><li class="card ev" data-date="2026-10-17" data-cities="toronto"><div class="date"><b>17</b><span>сб</span></div><div class="body"><img class="poster" src="https://bandura.org/wp-content/uploads/2026/09/image-2-e1789462998298.webp" alt="Афіша туру Капели бандуристів «Ukraine Lives»" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><h3>«Все буде Україна»: концерт Капели бандуристів</h3><div class="meta">19:00 · St. Paul&#x27;s Bloor Street, 227 Bloor St E, Торонто</div><p>Виступ Української капели бандуристів Північної Америки. Для молоді до 22 років вхід вільний.</p><div class="src">Джерела: <a href="https://bandura.org/ukraine-lives-tour/">Капела бандуристів, bandura.org</a>, <a href="https://saintjosaphat.com/content/bulletins/bulletin.pdf">бюлетень катедри святого Йосафата, 11.10.2026</a></div></div></li><li class="card ev" data-date="2026-10-25" data-cities="toronto"><div class="date"><b>25</b><span>нд</span></div><div class="body"><h3>Бінґо й обід у парафії</h3><div class="meta">після Літургії о 10:00 · Парафія святих апостолів Петра і Павла, 1490 Markham Rd, Скарборо</div><p>Парафіяльна рада запрошує на бінґо з призами та спільний обід. Вхід за добровільну пожертву.</p><div class="src">Джерело: <a href="https://stspeterandpaul.com/~stspete1/wp-content/uploads/2026/10/Bulletin-26-10-11.pdf">бюлетень парафії святих апостолів Петра і Павла, 11.10.2026</a></div></div></li></ul><h3 class="month">Листопад 2026</h3><ul class="list"><li class="card ev" data-date="2026-11-15" data-cities="toronto"><div class="date"><b>15</b><span>нд</span></div><div class="body"><h3>Храмове свято катедри святого Йосафата</h3><div class="meta">11:00 · Катедра святого Йосафата, 143 Franklin Ave, Торонто</div><p>Святкова Літургія, після неї програма та обід у церковній залі.</p><div class="src">Джерело: <a href="https://saintjosaphat.com/content/bulletins/bulletin.pdf">бюлетень катедри святого Йосафата, 11.10.2026</a></div></div></li><li class="card ev" data-date="2026-11-15" data-cities="toronto"><div class="date"><b>15</b><span>нд</span></div><div class="body"><img class="poster" src="https://ucctoronto.ca/storage/img/Tour%20Poster_1788996670.jpg" alt="Афіша «Українського воєнного реквієму» ансамблю Axios" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><h3>«Український воєнний реквієм»</h3><div class="meta">16:00 · St. Paul&#x27;s Basilica, 83 Power St, Торонто</div><p>Чоловічий ансамбль Axios, понад 50 співаків хору та запрошені солісти. Диригент Майкл Цауґ.</p><div class="src">Джерела: <a href="https://ucctoronto.ca/events/axios-men-s-ensemble-of-edmonton-presents-the-juno-award-winning-ukrainian-war-requiem">календар КУК-Торонто</a>, <a href="https://saintjosaphat.com/content/bulletins/bulletin.pdf">бюлетень катедри святого Йосафата, 11.10.2026</a> · Квитки: <a href="https://www.axiosmensensemble.com">axiosmensensemble.com</a></div></div></li></ul>
+<p class="empty" hidden>Найближчих анонсів поки немає.</p></section>
+<section class="sec" id="novyny" aria-labelledby="h-n"><h2 id="h-n">Новини</h2><ul class="list news"><li class="card" data-cities="toronto"><img class="poster" src="/ca/toronto/bog-posylaye-vas/infographic.jpg" alt="Інфографіка до проповіді «Бог посилає вас»" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><span class="tag">Проповідь</span><h3><a href="/ca/toronto/bog-posylaye-vas/">Бог посилає вас</a></h3><div class="meta">11 жовтня 2026</div><p>Владика Браян Байда на 50-ліття парафії святого пророка Іллі в Бремптоні: чого насправді прагне людська душа і чому ми приходимо до церкви. Аудіозапис, головні думки і повний текст.</p><div class="src">Джерело: <a href="/ca/toronto/bog-posylaye-vas/">запис apostol.ua у парафії святого пророка Іллі, 11.10.2026</a></div></li></ul>
+<p class="empty" hidden>Новин поки немає.</p></section>
+</main>
+<footer><div class="wrap"><span>Анонси й новини Української Греко-Католицької Церкви та громади</span><span><span class="visually-hidden">©</span><svg class="copy" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13.1 7.4a4 4 0 1 0 0 5.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> 2026 apostol.ua</span></div></footer>
 <script>
 (function(){
-  var a=document.getElementById('aud'),b=document.getElementById('play'),s=document.getElementById('seek'),t=document.getElementById('time'),ico=document.getElementById('ico');
-  var PLAY='<path d="M7 4.5v15l13-7.5z"/>',PAUSE='<path d="M6 4.5h4v15H6zM14 4.5h4v15h-4z"/>';
-  function f(x){x=Math.max(0,Math.floor(x||0));return Math.floor(x/60)+':'+String(x%60).padStart(2,'0')}
-  function dur(){return isFinite(a.duration)&&a.duration>0?a.duration:861}
-  function upd(){s.max=Math.floor(dur());s.value=Math.floor(a.currentTime);t.textContent=f(a.currentTime)+' / '+f(dur())}
-  b.addEventListener('click',function(){if(a.paused){var p=a.play();if(p&&p.catch)p.catch(function(){})}else a.pause()});
-  a.addEventListener('play',function(){ico.innerHTML=PAUSE;b.setAttribute('aria-label','Пауза')});
-  a.addEventListener('pause',function(){ico.innerHTML=PLAY;b.setAttribute('aria-label','Слухати проповідь')});
-  a.addEventListener('timeupdate',upd);a.addEventListener('loadedmetadata',upd);
-  s.addEventListener('input',function(){a.currentTime=+s.value;upd()});
+  var t=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Toronto'}));
+  var today=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');
+  var city='all';
+  function apply(){
+    document.querySelectorAll('[data-cities]').forEach(function(el){
+      var past=el.dataset.date&&el.classList.contains('ev')&&el.dataset.date<today;
+      var off=city!=='all'&&el.dataset.cities.split(' ').indexOf(city)<0;
+      el.hidden=past||off;
+    });
+    document.querySelectorAll('.month').forEach(function(m){
+      var l=m.nextElementSibling;m.hidden=!l.querySelector('li:not([hidden])');l.hidden=m.hidden;
+    });
+    document.querySelectorAll('.sec').forEach(function(s){
+      var n=s.querySelector('.empty');if(n)n.hidden=!!s.querySelector('[data-cities]:not([hidden])');
+    });
+  }
+  document.querySelectorAll('button.chip').forEach(function(b){
+    b.addEventListener('click',function(){
+      city=b.dataset.city;
+      document.querySelectorAll('button.chip').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+      apply();
+    });
+  });
+  function setView(v){
+    document.body.classList.toggle('compact',v==='compact');
+    document.querySelectorAll('[data-view]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.view===v)});
+    try{localStorage.setItem('apostol-view',v)}catch(_){}
+  }
+  document.querySelectorAll('[data-view]').forEach(function(b){b.addEventListener('click',function(){setView(b.dataset.view)})});
+  var sv='big';try{sv=localStorage.getItem('apostol-view')||'big'}catch(_){}
+  setView(sv);
+  apply();
 })();
 </script>
-
 </body></html>

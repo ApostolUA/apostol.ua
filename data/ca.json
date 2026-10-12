@@ -1,0 +1,93 @@
+{
+  "country": {"code": "ca", "name": "Канада"},
+  "cities": {
+    "toronto": {"name": "Торонто", "loc": "у Торонто"},
+    "mississauga": {"name": "Міссісага", "loc": "у Міссісазі"}
+  },
+  "events": [
+    {
+      "id": "bishops-banquet-2026",
+      "date": "2026-10-15",
+      "cities": ["toronto", "mississauga"],
+      "title": "Щорічний бенкет Владики Браяна Байди",
+      "place": "Pearson Convention Centre, 2638 Steeles Ave E, Бремптон",
+      "text": "Благодійний вечір Торонтської єпархії УГКЦ. Кошти підуть на допомогу родинам у потребі та новоприбулим, а також на служіння сім'ї в єпархії.",
+      "poster": "https://ucctoronto.ca/storage/img/Oct%2015%20Bishop%27s%20Banquet_page-0001_1787335235.jpg",
+      "posterAlt": "Афіша бенкету Владики Браяна",
+      "sources": [
+        ["календар КУК-Торонто", "https://ucctoronto.ca/events/blagodiyna-vecherya-vladiki-bishop-s-banquet-2026"],
+        ["бюлетень парафії святих апостолів Петра і Павла, 11.10.2026", "https://stspeterandpaul.com/~stspete1/wp-content/uploads/2026/10/Bulletin-26-10-11.pdf"]
+      ],
+      "tickets": ["ucet.ca", "https://ucet.ca/bishop-bryan/bishops-annual-banquet/"]
+    },
+    {
+      "id": "bandurist-chorus-2026-10-17",
+      "date": "2026-10-17",
+      "time": "19:00",
+      "cities": ["toronto"],
+      "title": "«Все буде Україна»: концерт Капели бандуристів",
+      "place": "St. Paul's Bloor Street, 227 Bloor St E, Торонто",
+      "text": "Виступ Української капели бандуристів Північної Америки. Для молоді до 22 років вхід вільний.",
+      "poster": "https://bandura.org/wp-content/uploads/2026/09/image-2-e1789462998298.webp",
+      "posterAlt": "Афіша туру Капели бандуристів «Ukraine Lives»",
+      "sources": [
+        ["Капела бандуристів, bandura.org", "https://bandura.org/ukraine-lives-tour/"],
+        ["бюлетень катедри святого Йосафата, 11.10.2026", "https://saintjosaphat.com/content/bulletins/bulletin.pdf"]
+      ]
+    },
+    {
+      "id": "spp-bingo-2026-10-25",
+      "date": "2026-10-25",
+      "time": "після Літургії о 10:00",
+      "cities": ["toronto"],
+      "title": "Бінґо й обід у парафії",
+      "place": "Парафія святих апостолів Петра і Павла, 1490 Markham Rd, Скарборо",
+      "text": "Парафіяльна рада запрошує на бінґо з призами та спільний обід. Вхід за добровільну пожертву.",
+      "sources": [
+        ["бюлетень парафії святих апостолів Петра і Павла, 11.10.2026", "https://stspeterandpaul.com/~stspete1/wp-content/uploads/2026/10/Bulletin-26-10-11.pdf"]
+      ]
+    },
+    {
+      "id": "st-josaphat-feast-2026",
+      "date": "2026-11-15",
+      "time": "11:00",
+      "cities": ["toronto"],
+      "title": "Храмове свято катедри святого Йосафата",
+      "place": "Катедра святого Йосафата, 143 Franklin Ave, Торонто",
+      "text": "Святкова Літургія, після неї програма та обід у церковній залі.",
+      "sources": [
+        ["бюлетень катедри святого Йосафата, 11.10.2026", "https://saintjosaphat.com/content/bulletins/bulletin.pdf"]
+      ]
+    },
+    {
+      "id": "axios-requiem-2026",
+      "date": "2026-11-15",
+      "time": "16:00",
+      "cities": ["toronto"],
+      "title": "«Український воєнний реквієм»",
+      "place": "St. Paul's Basilica, 83 Power St, Торонто",
+      "text": "Чоловічий ансамбль Axios, понад 50 співаків хору та запрошені солісти. Диригент Майкл Цауґ.",
+      "poster": "https://ucctoronto.ca/storage/img/Tour%20Poster_1788996670.jpg",
+      "posterAlt": "Афіша «Українського воєнного реквієму» ансамблю Axios",
+      "sources": [
+        ["календар КУК-Торонто", "https://ucctoronto.ca/events/axios-men-s-ensemble-of-edmonton-presents-the-juno-award-winning-ukrainian-war-requiem"],
+        ["бюлетень катедри святого Йосафата, 11.10.2026", "https://saintjosaphat.com/content/bulletins/bulletin.pdf"]
+      ],
+      "tickets": ["axiosmensensemble.com", "https://www.axiosmensensemble.com"]
+    }
+  ],
+  "news": [
+    {
+      "id": "bog-posylaye-vas",
+      "date": "2026-10-11",
+      "cities": ["toronto"],
+      "kicker": "Проповідь",
+      "title": "Бог посилає вас",
+      "text": "Владика Браян Байда на 50-ліття парафії святого пророка Іллі в Бремптоні: чого насправді прагне людська душа і чому ми приходимо до церкви. Аудіозапис, головні думки і повний текст.",
+      "image": "/ca/toronto/bog-posylaye-vas/infographic.jpg",
+      "imageAlt": "Інфографіка до проповіді «Бог посилає вас»",
+      "url": "/ca/toronto/bog-posylaye-vas/",
+      "sources": [["запис apostol.ua у парафії святого пророка Іллі, 11.10.2026", "/ca/toronto/bog-posylaye-vas/"]]
+    }
+  ]
+}
