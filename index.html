@@ -636,7 +636,7 @@ function calHTML(){
     g+=`<button type="button" data-act="day" data-n="${n}" class="${has.has(n)?'has':''}${n===0?' tod':''}" aria-pressed="${on}" aria-label="${d} ${MON[m]}${n===0?', сьогодні':''}${has.has(n)?', є події':''}">${d}</button>`;
   }
   return `<div class="cal"><div class="cal-h"><button type="button" data-act="calm" data-k="-1" aria-label="Попередній місяць">‹</button><b>${MONN[m]} ${y}</b><button type="button" data-act="calm" data-k="1" aria-label="Наступний місяць">›</button></div>`
-   +`<div class="cal-g">${g}</div><small>${S.d1==null?'Натисніть день або два дні, щоб вибрати проміжок.':`Вибрано: ${dateLbl()}<br>`+(S.d2==null?'Натисніть ще день, щоб вибрати проміжок.':'Натисніть день, щоб почати знову.')}</small></div>`;
+   +`<div class="cal-g">${g}</div><small>${S.d1==null?'Натисніть день або два дні, щоб вибрати проміжок.':`Вибрано: ${dateLbl()} <button type="button" class="reset" data-act="unchip" data-c="date">Скинути дату</button><br>`+(S.d2==null?'Натисніть ще день, щоб вибрати проміжок.':'Натисніть день, щоб почати знову.')}</small></div>`;
 }
 const dShort = d => `${d.getDate()} ${MONS2[d.getMonth()]}${yr(d)}`;
 function dateLbl(){
